@@ -1,0 +1,439 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    @apply
+    flex
+    items-center
+    justify-between
+    bg-blue-400
+    fixed
+    left-0
+    right-0
+    shadow-md
+    z-20
+}
+.navbar .navbar-left{
+    @apply
+    ml-8
+    flex
+    items-center
+}
+.navbar .navbar-left .brand{
+    @apply
+    font-bold
+    text-white
+    text-2xl
+}
+.navbar .navbar-left .nav-button-toggle{
+    @apply
+    flex
+    items-center
+    justify-center
+    w-14
+    h-14
+    flex-col
+    ml-6
+    gap-1
+    sm:hidden
+}
+.navbar .navbar-left .nav-button-toggle span{
+    @apply
+    w-6
+    h-[2px]
+    bg-white
+}
+
+.navbar-right{
+    @apply
+    mr-8
+}
+.navbar-right .nav-component{
+    @apply
+    flex
+    gap-x-3
+}
+.navbar-right .nav-component li{
+    @apply
+    relative
+}
+.navbar-right .nav-component li a{
+    @apply
+    flex
+    items-center
+    justify-center
+    text-white
+    h-14
+    px-4
+    text-sm
+    font-normal
+}
+.navbar-right .nav-component li a:hover,
+.navbar-right .nav-component li a:focus{
+    @apply
+    bg-blue-500
+    font-bold
+}
+.hero{
+    @apply
+    w-screen
+    h-screen
+    bg-slate-600
+}
+
+.hero .swiper .swiper-wrapper .swiper-slide{
+    @apply
+    bg-red-500
+    w-screen
+    h-screen
+    relative
+}
+.hero .swiper .swiper-wrapper .swiper-slide img{
+    @apply
+    w-full
+    h-full
+    relative
+}
+.hero .swiper .swiper-wrapper .swiper-slide .swiper-slide-component{
+    @apply
+    absolute
+    z-20
+    flex
+    items-center
+    w-full
+    h-full
+    bg-red-500
+}
+.slide-next{
+    @apply
+    absolute
+    z-20
+    float-left
+    right-8
+    w-14
+    h-14
+    rounded-full
+    bg-blue-500
+    top-[50%]
+    flex
+    items-center
+    justify-center
+    shadow-md
+}
+.slide-prev i,
+.slide-next i{
+    @apply
+    text-[30px]
+    text-white
+}
+.hero:hover .swiper-navigation{
+    @apply
+    opacity-100
+}
+.swiper-navigation{
+    @apply
+    opacity-0
+}
+.slide-prev{
+    @apply
+    absolute
+    z-20
+    float-left
+    left-8
+    w-14
+    h-14
+    rounded-full
+    bg-blue-500
+    top-[50%]
+    flex
+    items-center
+    justify-center
+    shadow-md
+}
+.swiper-pagination-bullet{
+    @apply
+    w-6
+    h-3
+    rounded-md
+    bg-slate-50
+}
+.swiper-pagination-bullet-active{
+    @apply
+    w-12
+    bg-blue-500
+}
+
+section.hero-contents{
+    @apply
+    w-full
+    px-[10%]
+    py-[100px]
+}
+.hero-contents-header{
+    @apply
+    flex
+    items-center
+    justify-center
+    flex-col
+    mb-8
+}
+.hero-contents-header h1{
+    @apply
+    font-medium
+    text-2xl
+    mb-3
+    text-slate-600
+}
+.hero-contents-header p{
+    @apply
+    font-normal
+    text-base
+    mb-3
+    text-slate-500
+}
+
+.card-news{
+    @apply
+    bg-white 
+    shadow-md 
+    rounded-md
+}
+.card-news img{
+    @apply
+    bg-cover
+    rounded-md
+}
+.card-new-content{
+    @apply
+    p-6
+}
+.card-new-content h1{
+    @apply
+    font-medium
+    text-slate-600
+    text-2xl
+    mb-3
+}
+.card-new-content p{
+    @apply
+    font-normal
+    text-slate-400
+    text-base
+}
+.btn-selengkapnya{
+    @apply
+    text-blue-500
+    float-right
+    my-6
+    text-sm
+    font-medium
+}
+.card-features{
+    @apply
+    flex
+    flex-col
+    items-center
+    justify-center
+    bg-white 
+    shadow-md 
+    rounded-md
+    p-6
+}
+
+.hero-footer{
+    @apply
+    bg-blue-600
+    w-full
+    p-8
+    sticky
+}
+
+/* login-screen */
+.login-screen{
+    @apply
+    flex
+    items-center
+    justify-center
+    w-screen
+    h-screen
+    overflow-hidden
+    bg-slate-200
+}
+.login-screen .login-box{
+    @apply
+    bg-white
+    min-w-[33.3333%]
+    max-sm:min-w-[90%]
+    mr-8
+    ml-8
+    p-8
+    rounded-md
+    shadow-md
+}
+.login-screen .login-box .login-header{
+    @apply
+    flex
+    flex-col
+    text-center
+    items-center
+    justify-center
+    mb-8
+    pb-6
+    border-b-2
+    border-b-blue-500
+}
+.login-screen .login-box form {
+    @apply
+    grid
+    grid-flow-row
+    gap-3
+}
+.login-screen .login-box form .form-group{
+    @apply
+    relative
+    h-[38px]
+}
+.login-screen .login-box form .form-group .input-icons,
+.login-screen .login-box form .form-group .password-show{
+    @apply
+    absolute
+    z-10
+    w-[38px]
+    h-[38px]
+    flex
+    items-center
+    justify-center
+
+}
+.login-screen .login-box form .form-group .input-icons i,
+.login-screen .login-box form .form-group .password-show i{
+    @apply
+    text-slate-500
+    text-[20px]
+}
+.login-screen .login-box form .form-group input.form-control{
+    @apply
+    w-full
+    h-full
+    outline-none
+    border-2
+    border-slate-200
+    rounded-md
+    px-[38px]
+    font-medium
+    text-sm
+    text-slate-400
+    focus:border-blue-500
+}
+.login-screen .login-box form .form-group .password-show{
+    @apply
+    right-0
+    top-0
+    cursor-pointer
+}
+.input-remember{
+    @apply
+    flex
+    items-center
+    justify-between
+}
+.input-remember .form-remember{
+    @apply
+    w-1/2
+    flex
+    items-center
+}
+.input-remember .form-remember input{
+    @apply
+    opacity-0
+    z-20
+    w-5
+    h-5
+    transition-all
+    duration-300
+    ease-in-out
+}
+.input-remember .form-remember .ck{
+    @apply
+    w-5
+    h-5
+    border
+    border-slate-400
+    absolute
+    z-10
+    rounded-sm
+    transition-all
+    duration-300
+    ease-in-out
+}
+.input-remember .form-remember .ck::after{
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    @apply
+    w-[10px]
+    h-[10px]
+    bg-blue-500
+    absolute
+    rounded-full
+    opacity-0
+    transition-all
+    duration-300
+    ease-in-out
+}
+.input-remember .form-remember span.tx{
+    @apply
+    font-medium 
+    text-sm
+    text-slate-500
+    ml-3
+}
+.input-remember .form-remember input:checked + .ck{
+    @apply
+    border-blue-500
+    rounded-full
+    transition-all
+    duration-300
+    ease-in-out
+}
+.input-remember .form-remember input:checked + .ck::after{
+    @apply
+    opacity-100
+    transition-all
+    duration-300
+    ease-in-out
+}
+.input-remember .form-remember input:checked + .ck + .tx{
+    @apply
+    line-through
+}
+.forgot-btn{
+    @apply
+    font-medium 
+    text-sm
+    text-blue-500
+    underline 
+}
+.login-screen .login-box form .btn-login{
+    @apply
+    flex
+    items-center
+    justify-center
+    px-8
+    py-2
+    rounded-full
+    bg-blue-500
+    mt-8
+    text-white
+    font-medium
+    hover:bg-blue-600
+    hover:shadow-lg
+}
